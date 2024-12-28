@@ -25,7 +25,7 @@ public class ProducerApplication {
 	CommandLineRunner run(KafkaProducerService kafkaProducerService) {
 		return args -> {
 			// Example of publishing messages
-			for (int i = 1; i <= 100000; i++) {
+			for (int i = 1; i <= 2000000; i++) {
 				kafkaProducerService.sendMessage(
 						"{\"employeeId\":\"E" + i + "\", \"name\":\"Employee " + i + "\", \"designation\":\"Designation " + i + "\", \"department\":\"Department " + (i % 10) + "\", \"dateOfJoining\":\"2023-01-01\"}"
 				);
